@@ -7,6 +7,7 @@ import * as Location from 'expo-location';
 import axios from "axios";
 
 import DateTime from './components/DateTime'
+import CurrentTempEl from './components/WeatherScroll'
 import WeatherScroll from './components/WeatherScroll'
 import SearchBar from './components/SearchLocationWeather'
 const API_KEY ='49cc8c821cd2aff9af04c9f98c36eb74';
@@ -52,34 +53,38 @@ export default function App() {
 
   function SearchScreen() {
   const [searchText,setSearchText] = useState("");
-      const [city,setCity] = useState([]);
+      const [city,setCity] = useState("");
 
-     const SearchCities = () =>{
-         axios.get(`http://api.openweathermap.org/data/2.5/weather?q={searchText}&appid=${API_KEY}`)
-             .then( (response) =>{
-                 // handle success
-                 setCity(response.data.city);
-             })
-             .catch(function (error) {
-                 // handle error
-                 console.log(error);
-             })
-             .then(function () {
-                 // always executed
-             });
-     }
+      const searchCities = () =>{
+               console.log(searchText)
+                   axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${searchText}&APPID=924077f3e7e3dbbcc18c3cdcacea6bb1`)
+                       .then( (response) =>{
+
+                           setCity(response.data.city);
+                           console.log(response);
+                       })
+                       .catch(function (error) {
+
+                           console.log(error);
+                       })
+                       .then(function () {
+
+                       });
+        }
+
     return (
       <View style={styles.container}>
-       <SearchBar searchText={searchText} setSearchText={setSearchText} onSubmit={SearchCities}/>
-
+       <SearchBar searchText={searchText} setSearchText={setSearchText} onSubmit={searchCities}/>
+           
       </View>
     );
   }
 
+
   function ResultScreen() {
       return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <SearchCities/>
+
         </View>
       );
     }

@@ -9,7 +9,7 @@ const SearchBar = (props)=>{
                 placeholder="Search your city"
                 style={styles.input}
                 value={props.searchText}
-                onChangeText={(text)=>props.setSearchText(text)}
+                onChangeText={(city)=>props.setSearchText(city)}
                 onSubmitEditing={props.onSubmit}
             />
         </View>
