@@ -47,9 +47,9 @@ const DateTime = ({current, lat, lon, timezone}) => {
                </View>
                <View style={styles.weatherItemContainer}>
                     <WeatherItem title="Humidity" value={current? current.humidity : ""} unit="%"/>
-                    <WeatherItem title="Pressure" value={current? current.pressure : ""} unit="hPA"/>
-                    <WeatherItem title="Sunrise" value={current? moment.tz(current.sunrise * 1000, timezone ).format('HH:mm'): ""} unit="am"/>
-                    <WeatherItem title="Sunset" value={current? moment.tz(current.sunset * 1000, timezone ).format('HH:mm') : ""} unit="pm"/>
+                    <WeatherItem title="Pressure" value={current? current.pressure : ""} unit=" hPA"/>
+                    <WeatherItem title="Sunrise" value={current? moment.tz(current.sunrise * 1000, timezone ).format('HH:mm'): ""} unit=" am"/>
+                    <WeatherItem title="Sunset" value={current? moment.tz(current.sunset * 1000, timezone ).format('HH:mm') : ""} unit=" pm"/>
                </View>
            </View>
            <View style={styles.rightAlign}>
@@ -68,31 +68,31 @@ const styles = StyleSheet.create({
         padding: 15
     },
     heading: {
-        fontSize: 45,
-        color:'white',
+        fontSize: 40,
+        color:'#363537',
         fontWeight: '100'
     },
     subheading: {
         fontSize: 25,
-        color: '#eee',
-        fontWeight: '300'
+        color: '#363537',
+        fontWeight: '400'
     },
     rightAlign: {
         textAlign:'right',
         marginTop: 20
     },
     timezone: {
-        fontSize: 20,
-        color:'white'
+        fontSize: 16,
+        color:'#363537'
     },
     latlong:{
-        fontSize:16,
-        color:'white',
-        fontWeight: '700'
+        fontSize:14,
+        color:'#363537',
+        fontWeight: '600'
     },
     weatherItemContainer: {
-        backgroundColor: "#18181b99",
-        borderRadius: 10,
+        backgroundColor: "#363537",
+        borderRadius: 13,
         padding: 10,
         marginTop: 10
     }, 
@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     weatherItemTitle: {
-        color:'#eee',
-        fontSize: 14,
-        fontWeight: '100'
+        color:'#F1E8B8',
+        fontSize: 15,
+        fontWeight: '300'
     }
 })
 

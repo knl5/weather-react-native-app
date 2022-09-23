@@ -50,18 +50,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#00000033',
         borderRadius:10,
-        borderColor:"#eee",
+        borderColor:"#F1E8B8",
         borderWidth:1,
         padding: 20,
         marginLeft: 10
     }, 
     day: {
         fontSize: 20,
-        color:"white",
+        color:"#F1E8B8",
         backgroundColor: "#3c3c44",
         padding: 10,
         textAlign:"center",
-        borderRadius: 50,
+        borderRadius: 60,
         fontWeight: "200",
         marginBottom: 15
     },   

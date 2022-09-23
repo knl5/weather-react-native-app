@@ -41,12 +41,13 @@ const CurrentTempEl = ({data}) => {
 const styles = StyleSheet.create({
     scrollView: {
         flex:0.4,
-        backgroundColor: '#18181bcc',
+        backgroundColor: '#363537',
+        opacity: 0.9,
         padding:30
     },
     image: {
-        width: 150,
-        height: 150
+        width: 120,
+        height: 120
     },
     currentTempContainer: {
         flexDirection: 'row',
@@ -54,28 +55,28 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:'center',
         borderRadius: 10,
-        borderColor:'#eee',
+        borderColor:'#F1E8B8',
         borderWidth:1,
         padding: 15
     },
     day: {
         fontSize: 20,
-        color:"white",
-        backgroundColor: "#3c3c44",
+        color:"#F1E8B8",
+        backgroundColor: "#363537",
         padding: 10,
         textAlign:"center",
-        borderRadius: 50,
-        fontWeight: "200",
+        borderRadius: 30,
+        fontWeight: "300",
         marginBottom: 15
     },
     temp: {
         fontSize: 16,
-        color:"white",
-        fontWeight:"100",
+        color:"#F1E8B8",
+        fontWeight:"300",
         textAlign:"center"
     },
     otherContainer: {
-        paddingRight: 40
+        paddingRight: 30
     }
 })
 
